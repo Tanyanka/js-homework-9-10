@@ -1,0 +1,75 @@
+/*js-checkbox*/
+
+.check-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: inherit;
+    padding: 20px 10px;
+}
+label {
+    cursor: pointer;
+}
+
+.checkbox-jquery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90px;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75px;
+}
+
+[type='checkbox'] {
+    display: none;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url('../img/checkbox-sprite.png');
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.checkbox-disabled {
+    background-image: url('../img/unchecked.png');
+}
+/*css checkbox*/
+.css-checkbox {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+.css-checkbox input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.css-checkbox label {
+    cursor: pointer;
+}
+.css-checkbox label::after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    background-image: url('../img/checkbox-sprite.png');
+}
+.css-checkbox input[type=checkbox]:checked + label:after {
+    background-position: 0 -14px;
+}
+.css-checkbox label:hover::after{
+    background-position: 0 -28;
+}
+.css-checkbox input[type=checkbox]:checked + label:hover:after {
+    background-position: 0 -42;
+}
